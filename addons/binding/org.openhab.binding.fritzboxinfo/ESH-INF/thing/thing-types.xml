@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="fritzboxinfo"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="fritzboxinfo">
+        <supported-bridge-type-refs>
+            <bridge-type-ref id="fritzboxinfo" />
+        </supported-bridge-type-refs>
+
+        <label>FritzBoxInfo Binding Thing</label>
+        <description>FritzBoxBinding</description>
+
+        <channels>
+            <channel id="bytessendrate" typeId="bytessendrate"/>
+            <channel id="bytesreceivedrate" typeId="bytesreceivedrate"/>
+        </channels>
+    </thing-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="bytessendrate">
+        <item-type>Number</item-type>
+        <label>Bytes Send Rate</label>
+        <description>Rate of Bytes Send to the WAN interface</description>
+    </channel-type>
+      <channel-type id="bytesreceivedrate">
+        <item-type>Number</item-type>
+        <label>Bytes Received Rate</label>
+        <description>Rate of Bytes received from the WAN interface</description>
+    </channel-type>
+
+</thing:thing-descriptions>
